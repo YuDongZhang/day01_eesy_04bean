@@ -20,7 +20,7 @@ public class Client {
         //1,获取核心容器对象
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
         //2,根据id获取bean对象 , 下面的2中方式都可以
-        IAccountService as1 = (IAccountService) ac.getBean("accountService");
+        IAccountService as1 = (IAccountService) ac.getBean("accountService2");
         as1.saveAccount();
 
     }
