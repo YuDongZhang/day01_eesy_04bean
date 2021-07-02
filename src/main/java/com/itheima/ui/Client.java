@@ -18,11 +18,10 @@ public class Client {
     public static void main(String[] args) {
 
         //1,获取核心容器对象
-        ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
+        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
         //2,根据id获取bean对象 , 下面的2中方式都可以
         IAccountService as1 = (IAccountService) ac.getBean("accountService");
         as1.saveAccount();
-        //关闭容器
-        ac.close();
+
     }
 }
